@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom';
+import styles from '../styles/navBar.module.css';
 
 const links = [
   {
@@ -14,12 +15,12 @@ const links = [
 export default function NavBar() {
   return (
     <>
-      <div className="header">
+      <div className={styles.header}>
         <h1>Bookstore CMS</h1>
         <nav>
-          <ul className="navList">
+          <ul className={styles.navList}>
             {links.map((link) => (
-              <li className="navLinks" key={link.text}>
+              <li className={styles.navLinks} key={link.text}>
                 <NavLink to={link.path}>{link.text}</NavLink>
               </li>
             ))}
