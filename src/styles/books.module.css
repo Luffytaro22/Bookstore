@@ -1,0 +1,10 @@
+.booksContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+.booksInfo {
+  text-align: left;
+}
