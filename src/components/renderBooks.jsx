@@ -1,4 +1,5 @@
 import Books from './Books';
+import styles from '../styles/renderBooks.module.css';
 
 export default function RenderBooks() {
   const books = [
@@ -20,7 +21,7 @@ export default function RenderBooks() {
   ];
 
   return (
-    <div className="books">
+    <div className={styles.books}>
       {books.map((book) => (
         <Books key={book.title} gender={book.gender} title={book.title} author={book.author}/>
       ))}
