@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
+import styles from '../styles/books.module.css';
 
 export default function Books({ gender, title, author }) {
   return (
-    <div className="booksContainer">
-      <div className="booksInfo">
+    <div className={styles.booksContainer}>
+      <div className={styles.booksInfo}>
         <p>{gender}</p>
         <h2>{title}</h2>
         <p>{author}</p>
