@@ -20,8 +20,10 @@ export default function RenderBooks() {
   ];
 
   return (
-    books.map((book) => {
-      <Books gender={book.gender} title={book.title} author={book.author}/>;
-    })
+    <div className="books">
+      {books.map((book) => (
+        <Books key={book.title} gender={book.gender} title={book.title} author={book.author}/>
+      ))}
+    </div>
   );
 }
