@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 // Slice state for books
-const booksSlice = createSlice({
+export const booksSlice = createSlice({
   name: 'books',
   initialState: [],
   reducers: {
