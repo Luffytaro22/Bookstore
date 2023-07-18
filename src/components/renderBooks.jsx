@@ -8,7 +8,7 @@ export default function RenderBooks() {
   return (
     <div className={styles.books}>
       {books.map((book) => (
-        <Books key={book.item_id} gender={book.category} title={book.title} author={book.author}/>
+        <Books key={book.item_id} id={book.item_id} gender={book.category} title={book.title} author={book.author}/>
       ))}
     </div>
   );

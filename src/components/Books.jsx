@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styles from '../styles/books.module.css';
 
-export default function Books({ gender, title, author }) {
+export default function Books({ gender, title, author, id }) {
   return (
     <div className={styles.booksContainer}>
       <div className={styles.booksInfo}>
@@ -10,7 +10,7 @@ export default function Books({ gender, title, author }) {
         <p>{author}</p>
         <div className="booksOptions">
           <button type="button" className="booksButtons">Comments</button>
-          <button type="button" className="booksButtons">Remove</button>
+          <button type="button" className="booksButtons" id={id}>Remove</button>
           <button type="button" className="booksButtons">Edit</button>
         </div>
       </div>
@@ -31,4 +31,5 @@ Books.propTypes = {
   gender: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 }
