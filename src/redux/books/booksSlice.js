@@ -15,7 +15,17 @@ export const getBooks = createAsyncThunk('books/getBooks', async () => {
 // Slice state for books
 export const booksSlice = createSlice({
   name: 'books',
-  initialState: {},
+  initialState: {
+    books: {
+      item1: [
+        {
+          title: 'Game',
+          author: 'Nobody',
+          category: 'Fiction',
+        },
+      ]
+    },
+  },
   reducers: {
     addBook: (state, action) => {
       state.push(action.payload);
@@ -28,7 +38,6 @@ export const booksSlice = createSlice({
     builder
       .addCase(getBooks.fulfilled, (state, action) => {
         // Update the books state with the data received from the API
-        console.log(action.payload);
         state.books = action.payload;
       })
       .addCase(getBooks.rejected, (state, action) => {
