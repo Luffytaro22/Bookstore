@@ -49,10 +49,20 @@ export const booksSlice = createSlice({
         // Update the books state with the data received from the API
         state.books = action.payload;
       })
-      .addCase(getBooks.rejected, (state, action) => {
+      .addCase(getBooks.rejected, () => {
         // Handle the error if the API call fails
         // You can update the state or display an error message here
-        throw new action.error;
+        throw new Error('Failed to load books');
+      })
+      .addCase(postBook.fulfilled, (state, action) => {
+        // Update the books state with the data received from the API
+        // Assuming the API response is the newly added book object
+        state.books[action.payload.item_id] = [action.payload];
+      })
+      .addCase(postBook.rejected, () => {
+        // Handle the error if the API call fails
+        // You can update the state or display an error message here
+        throw new Error('Failed to add book');
       });
   },
 });
