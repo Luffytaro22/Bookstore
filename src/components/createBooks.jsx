@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { postBook } from '../redux/books/booksSlice';
 import styles from '../styles/createBooks.module.css';
 
 export default function CreateBooks() {
@@ -10,7 +10,7 @@ export default function CreateBooks() {
     const title = document.getElementById('bookTitle');
     const author = document.getElementById('bookAuthor');
     if (title.value && author.value) {
-      dispatch(addBook({
+      dispatch(postBook({
         "item_id": `item${books.length + 1}`,
         "title": title.value,
         "author": author.value,
