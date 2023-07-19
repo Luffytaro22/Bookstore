@@ -14,8 +14,14 @@ export default function RenderBooks() {
 
   return (
     <div className={styles.books}>
-      {Object.keys(books.books).forEach((book) => (
-        <Books key={book} id={book} gender={books.books[book][0].category} title={books.books[book][0].title} author={books.books[book][0].author}/>
+      {Object.keys(books.books).map((book) => (
+        <Books 
+          key={book} 
+          id={book} 
+          gender={books.books[book][0].category} 
+          title={books.books[book][0].title} 
+          author={books.books[book][0].author}
+        />
       ))}
     </div>
   );
