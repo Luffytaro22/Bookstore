@@ -2,8 +2,6 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -27,23 +25,26 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: rgba(0, 0, 0, 0.05);
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-family: Montserrat-Bold, sans-serif;
+  font-size: 1.875rem;
+  color: #0290ff;
 }
 
 button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
-  font-size: 1em;
+  font-size: 0.875rem;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  font-family: RobotoSlab-Light, sans-serif;
+  background-color: transparent;
   cursor: pointer;
   transition: border-color 0.25s;
+  color: #4386bf;
 }
 
 button:hover {
