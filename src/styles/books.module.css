@@ -8,3 +8,13 @@
 .booksInfo {
   text-align: left;
 }
+
+.booksComplete {
+  display: flex;
+}
+
+.Oval2 {
+  width: 4.25rem;
+  height: 4.25rem;
+  color: #307bbe;
+}
