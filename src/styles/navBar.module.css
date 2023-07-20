@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 85vw;
+  width: calc(100vw - (6.2rem + 6.25rem));
   margin: 0 0 2.375rem;
   background: #fff;
   padding: 1.438rem 6.188rem 1.688rem 6.25rem;
