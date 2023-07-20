@@ -6,6 +6,8 @@
 
 .formContainer h3 {
   margin-top: 20px;
+  font-family: Montserrat, sans-serif;
+  color: #888;
 }
 
 .formContainer form {
@@ -20,7 +22,12 @@
 }
 
 .formFields {
-  padding-left: 10px;
+  padding: 0.813rem 0.5rem;
+}
+
+.formFields::placeholder {
+  color: #c4c4c4;
+  font-family: Montserrat, sans-serif;
 }
 
 .formFields:first-child {
@@ -29,4 +36,7 @@
 
 .submitButton {
   flex: 0.5;
+  background-color: #0290ff;
+  color: #fff;
+  border-radius: 3px;
 }

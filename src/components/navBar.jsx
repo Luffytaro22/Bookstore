@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom';
+import { BiSolidUser } from 'react-icons/bi';
 import styles from '../styles/navBar.module.css';
 
 const links = [
@@ -16,8 +17,8 @@ export default function NavBar() {
   return (
     <>
       <div className={styles.header}>
-        <h1>Bookstore CMS</h1>
         <nav>
+          <h1>Bookstore CMS</h1>
           <ul className={styles.navList}>
             {links.map((link) => (
               <li className={styles.navLinks} key={link.text}>
@@ -26,6 +27,7 @@ export default function NavBar() {
             ))}
           </ul>
         </nav>
+        <BiSolidUser className={styles.user} />
       </div>
       <div id="outlet">
         <Outlet />

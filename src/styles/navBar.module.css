@@ -5,7 +5,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 97vw;
+  width: calc(100vw - (6.2rem + 6.25rem));
+  margin: 0 0 2.375rem;
+  background: #fff;
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+}
+
+.header nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .navList {
@@ -14,6 +23,17 @@
   gap: 20px;
 }
 
-.navLinks {
-  color: white;
+.navLinks * {
+  font-family: Montserrat, sans-serif;
+  color: #121212;
+  font-size: 0.813rem;
+  letter-spacing: 1.9px;
+}
+
+.user {
+  font-size: 1.2rem;
+  padding: 0.875rem;
+  color: #0290ff;
+  border-radius: 50%;
+  border: 1px solid #e8e8e8;
 }

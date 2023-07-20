@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { removeBook } from '../redux/books/booksSlice';
 import { useDispatch } from 'react-redux';
+import { BsCircle } from 'react-icons/bs';
 import { deleteBooks } from '../redux/books/booksSlice';
 import styles from '../styles/books.module.css';
 
@@ -16,21 +17,24 @@ export default function Books({ gender, title, author, id }) {
       <div className={styles.booksInfo}>
         <p>{gender}</p>
         <h2>{title}</h2>
-        <p>{author}</p>
-        <div className="booksOptions">
-          <button type="button" className="booksButtons">Comments</button>
-          <button type="button" className="booksButtons" id={id} onClick={handleClick}>Remove</button>
-          <button type="button" className="booksButtons">Edit</button>
+        <p className={styles.author} >{author}</p>
+        <div className={styles.booksOptions}>
+          <button type="button" className={styles.booksButtons}>Comments</button>
+          <button type="button" className={styles.booksButtons} id={id} onClick={handleClick}>Remove</button>
+          <button type="button" className={styles.booksButtons}>Edit</button>
         </div>
       </div>
-      <div className="booksComplete">
-        <h3>64%</h3>
-        <p>Completed</p>
+      <div className={styles.booksComplete}>
+        <BsCircle className={styles.Oval2} />
+        <div>
+          <h3>64%</h3>
+          <p>Completed</p>
+        </div>
       </div>
-      <div className="booksChapter">
-        <p>Current chapter</p>
+      <div className={styles.booksChapter}>
+        <p>CURRENT CHAPTER</p>
         <p>Chapter 17</p>
-        <button type="button" className="buttonUpdate">UPDATE PROGRESS</button>
+        <button type="button" className={styles.buttonUpdate}>UPDATE PROGRESS</button>
       </div>
     </div>
   );
