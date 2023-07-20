@@ -21,6 +21,15 @@ export const postBook = createAsyncThunk('books/addBook', async (newBook) => {
   }
 });
 
+export const deleteBooks = createAsyncThunk('books/deleteBook', async (id) => {
+  try {
+    const response = await axios.delete(API + `/${id}`);
+    return response.data;
+  } catch (error) {
+    throw new Error('Could not be deleted');
+  }
+})
+
 // Slice state for books
 export const booksSlice = createSlice({
   name: 'books',
@@ -40,7 +49,10 @@ export const booksSlice = createSlice({
       state.books[action.payload.item_id] = [action.payload];
     },
     removeBook: (state, action) => {
-      return state.filter((book) => book.item_id !== action.payload);
+      const itemIdToRemove = action.payload;
+      const updatedBooks = { ...state.books };
+      delete updatedBooks[itemIdToRemove];
+      state.books = updatedBooks;
     },
   },
   extraReducers: (builder) => {
