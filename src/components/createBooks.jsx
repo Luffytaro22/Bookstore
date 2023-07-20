@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { postBook } from '../redux/books/booksSlice';
+import { addBook, postBook } from '../redux/books/booksSlice';
 import { v4 as uuidv4 } from 'uuid';
 import styles from '../styles/createBooks.module.css';
 
@@ -10,12 +10,15 @@ export default function CreateBooks() {
     const title = document.getElementById('bookTitle');
     const author = document.getElementById('bookAuthor');
     if (title.value && author.value) {
-      dispatch(postBook({
+      const newBook = {
         "item_id": uuidv4(),
         "title": title.value,
         "author": author.value,
         "category": "Drama",
-      }));
+      };
+
+      dispatch(postBook(newBook));
+      dispatch(addBook(newBook));
       title.value = '';
       author.value = '';
     }
