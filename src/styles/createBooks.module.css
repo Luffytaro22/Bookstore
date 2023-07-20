@@ -6,7 +6,7 @@
 
 .formContainer h3 {
   margin-top: 20px;
-  font-family: Montserrat-Bold, sans-serif;
+  font-family: Montserrat, sans-serif;
   color: #888;
 }
 
@@ -27,7 +27,7 @@
 
 .formFields::placeholder {
   color: #c4c4c4;
-  font-family: Montserrat-Regular, sans-serif;
+  font-family: Montserrat, sans-serif;
 }
 
 .formFields:first-child {

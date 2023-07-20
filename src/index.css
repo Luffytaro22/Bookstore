@@ -29,7 +29,7 @@ body {
 }
 
 h1 {
-  font-family: Montserrat-Bold, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-size: 1.875rem;
   color: #0290ff;
 }
@@ -38,7 +38,7 @@ button {
   border: 1px solid transparent;
   font-size: 0.875rem;
   font-weight: 500;
-  font-family: RobotoSlab-Light, sans-serif;
+  font-family: Roboto Slab, sans-serif;
   background-color: transparent;
   cursor: pointer;
   transition: border-color 0.25s;
