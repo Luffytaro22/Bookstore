@@ -156,9 +156,8 @@ npm run dev
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a id="future-features"></a>
-* Implement Redux.
-* API fetch.
 * Categories page.
+* Improve design and styles.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->

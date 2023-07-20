@@ -1,21 +1,24 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { useDispatch } from 'react-redux';
+import { addBook, postBook } from '../redux/books/booksSlice';
+import { v4 as uuidv4 } from 'uuid';
 import styles from '../styles/createBooks.module.css';
 
 export default function CreateBooks() {
   const dispatch = useDispatch();
-  const books = useSelector((state) => state.books);
   const handleClick = (event) => {
     event.preventDefault();
     const title = document.getElementById('bookTitle');
     const author = document.getElementById('bookAuthor');
     if (title.value && author.value) {
-      dispatch(addBook({
-        "item_id": `item${books.length + 1}`,
+      const newBook = {
+        "item_id": uuidv4(),
         "title": title.value,
         "author": author.value,
         "category": "Drama",
-      }));
+      };
+
+      dispatch(postBook(newBook));
+      dispatch(addBook(newBook));
       title.value = '';
       author.value = '';
     }

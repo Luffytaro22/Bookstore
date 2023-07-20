@@ -1,10 +1,15 @@
 import PropTypes from 'prop-types';
 import { removeBook } from '../redux/books/booksSlice';
 import { useDispatch } from 'react-redux';
+import { deleteBooks } from '../redux/books/booksSlice';
 import styles from '../styles/books.module.css';
 
 export default function Books({ gender, title, author, id }) {
   const dispatch = useDispatch();
+  const handleClick = () => {
+    dispatch(deleteBooks(id));
+    dispatch(removeBook(id));
+  };
 
   return (
     <div className={styles.booksContainer}>
@@ -14,7 +19,7 @@ export default function Books({ gender, title, author, id }) {
         <p>{author}</p>
         <div className="booksOptions">
           <button type="button" className="booksButtons">Comments</button>
-          <button type="button" className="booksButtons" id={id} onClick={() => dispatch(removeBook(id))}>Remove</button>
+          <button type="button" className="booksButtons" id={id} onClick={handleClick}>Remove</button>
           <button type="button" className="booksButtons">Edit</button>
         </div>
       </div>
