@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { removeBook } from '../redux/books/booksSlice';
 import { useDispatch } from 'react-redux';
+import { BsCircle } from 'react-icons/bs';
 import { deleteBooks } from '../redux/books/booksSlice';
 import styles from '../styles/books.module.css';
 
@@ -23,9 +24,12 @@ export default function Books({ gender, title, author, id }) {
           <button type="button" className="booksButtons">Edit</button>
         </div>
       </div>
-      <div className="booksComplete">
-        <h3>64%</h3>
-        <p>Completed</p>
+      <div className={styles.booksComplete}>
+        <BsCircle className={styles.Oval2} />
+        <div>
+          <h3>64%</h3>
+          <p>Completed</p>
+        </div>
       </div>
       <div className="booksChapter">
         <p>Current chapter</p>
