@@ -37,7 +37,7 @@ export const booksSlice = createSlice({
   },
   reducers: {
     addBook: (state, action) => {
-      state.push(action.payload);
+      state.books[action.payload.item_id] = [action.payload];
     },
     removeBook: (state, action) => {
       return state.filter((book) => book.item_id !== action.payload);
@@ -54,16 +54,6 @@ export const booksSlice = createSlice({
         // You can update the state or display an error message here
         throw new Error('Failed to load books');
       })
-      .addCase(postBook.fulfilled, (state, action) => {
-        // Update the books state with the data received from the API
-        // Assuming the API response is the newly added book object
-        state.books[action.payload.item_id] = [action.payload];
-      })
-      .addCase(postBook.rejected, () => {
-        // Handle the error if the API call fails
-        // You can update the state or display an error message here
-        throw new Error('Failed to add book');
-      });
   },
 });
 
