@@ -17,8 +17,8 @@ export default function NavBar() {
   return (
     <>
       <div className={styles.header}>
-        <h1>Bookstore CMS</h1>
         <nav>
+          <h1>Bookstore CMS</h1>
           <ul className={styles.navList}>
             {links.map((link) => (
               <li className={styles.navLinks} key={link.text}>
