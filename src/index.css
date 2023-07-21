@@ -44,3 +44,9 @@ button {
   transition: border-color 0.25s;
   color: #4386bf;
 }
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}

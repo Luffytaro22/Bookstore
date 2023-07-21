@@ -37,3 +37,14 @@
   border-radius: 50%;
   border: 1px solid #e8e8e8;
 }
+
+@media only screen and (max-width: 660px) {
+  .header {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .header nav {
+    flex-direction: column;
+  }
+}
