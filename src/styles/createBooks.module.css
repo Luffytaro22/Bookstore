@@ -40,3 +40,18 @@
   color: #fff;
   border-radius: 3px;
 }
+
+@media only screen and (max-width: 680px) {
+  .formContainer {
+    text-align: center;
+  }
+
+  .formContainer form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .submitButton {
+    padding: 5px 10px;
+  }
+}
