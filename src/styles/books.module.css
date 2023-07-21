@@ -2,11 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   text-align: left;
   background: #fff;
   border: 1px solid #e8e8e8;
   padding: 2rem 9.188rem 1.625rem 1.688rem;
-  width: 80vw;
 }
 
 .booksInfo {
@@ -84,4 +84,17 @@
   width: 4.25rem;
   height: 4.25rem;
   color: #307bbe;
+}
+
+@media only screen and (max-width: 860px) {
+  .booksContainer {
+    padding: 2rem 2rem 1.625rem 1.688rem;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .booksContainer {
+    flex-direction: column;
+    gap: 50px;
+  }
 }

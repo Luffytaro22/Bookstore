@@ -4,3 +4,9 @@
   gap: 20px;
   width: 90vw;
 }
+
+@media only screen and (max-width: 680px) {
+  .books {
+    align-items: center;
+  }
+}
